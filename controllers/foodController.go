@@ -1,6 +1,6 @@
 package controllers
 
-import "github.com/gofiber/fiber/v3"
+import "github.com/gofiber/fiber/v2"
 
 func GetFoods(c *fiber.Ctx) error {
 	return c.SendString("🍜 All foods list")

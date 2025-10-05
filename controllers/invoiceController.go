@@ -1,23 +1,23 @@
 package controllers
 
-import "github.com/gofiber/fiber/v3"
+import "github.com/gofiber/fiber/v2"
 
-func GetInvoices(c *fiber.Ctx) {
+func GetInvoices(c *fiber.Ctx) error {
 	return c.SendString("get all invoice")
 }
 
-func GetInvoiceById(c *fiber.Ctx) {
+func GetInvoiceById(c *fiber.Ctx) error {
 	return c.SendString("get all invoice")
 }
 
-func CreateInvoice(c *fiber.Ctx) {
+func CreateInvoice(c *fiber.Ctx) error {
 	return c.SendString("get all invoice")
 }
 
-func updateInvoice(c *fiber.Ctx) {
+func UpdateInvoice(c *fiber.Ctx) error {
 	return c.SendString("get all invoice")
 }
 
-func DeleteInvoice(c *fiber.Ctx) {
+func DeleteInvoice(c *fiber.Ctx) error {
 	return c.SendString("get all invoice")
 }

@@ -1,23 +1,23 @@
 package controllers
 
-import "github.com/gofiber/fiber/v3"
+import "github.com/gofiber/fiber/v2"
 
-func GetOrderItem(c *fiber.Ctx) {
+func GetOrderItem(c *fiber.Ctx) error {
 	return c.SendString("get all Order")
 }
 
-func GetOrderByIdItem(c *fiber.Ctx) {
+func GetOrderItemById(c *fiber.Ctx) error {
 	return c.SendString("get all Order")
 }
 
-func AddOrderItem(c *fiber.Ctx) {
+func AddOrderItem(c *fiber.Ctx) error {
 	return c.SendString("get all Order")
 }
 
-func UpdateOrderItem(c *fiber.Ctx) {
+func UpdateOrderItem(c *fiber.Ctx) error {
 	return c.SendString("get all Order")
 }
 
-func DeleteOrderItem(c *fiber.Ctx) {
+func DeleteOrderItem(c *fiber.Ctx) error {
 	return c.SendString("get all Order")
 }
