@@ -4,12 +4,12 @@ import (
 	"log"
 	"os"
 
-	_ "foodorder/database"
+	"foodorder/database"
 	"foodorder/middleware"
 	"foodorder/routers"
 
-	"github.com/gofiber/fiber/v3"
-	"github.com/gofiber/fiber/v3/middleware/logger"
+	"github.com/gofiber/fiber/v2"
+	"github.com/gofiber/fiber/v2/middleware/logger"
 )
 
 func main() {
@@ -19,6 +19,12 @@ func main() {
 	if port == "" {
 		port = "8000"
 	}
+
+	// Connect to the database
+	if err := database.Connect(); err != nil {
+		log.Fatal(err)
+	}
+	log.Println("Database connected successfully")
 
 	// middleware
 	app.Use(logger.New())

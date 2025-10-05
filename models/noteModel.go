@@ -6,11 +6,11 @@ import (
 	"go.mongodb.org/mongo-driver/bson/primitive"
 )
 
-type Order struct {
+type Node struct {
 	ID         primitive.ObjectID `bson:"_id" json:"_id"`
-	Orer_Date  time.Time          `bson:"order_date" validate:"required"`
+	Text       string             `bson:"text" json:"text"`
+	Title      string             `bson:"title" json:"title"`
 	Created_at time.Time          `bson:"created_at" json:"created_at"`
 	Updated_at time.Time          `bson:"updated_at" json:"updated_at"`
-	Order_id   string             `bson:"order_id" json:"order_id"`
-	Table_id   string             `bson:"table_id" json:"table_id"`
+	Node_id    string             `bson:"node_id" json:"node_id"`
 }
