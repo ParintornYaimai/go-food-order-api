@@ -3,7 +3,7 @@ package routers
 import (
 	"foodorder/controllers"
 
-	"github.com/gofiber/fiber/v3"
+	"github.com/gofiber/fiber/v2"
 )
 
 func FoodRouter(app *fiber.App) {
