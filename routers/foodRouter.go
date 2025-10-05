@@ -12,5 +12,5 @@ func FoodRouter(app *fiber.App) {
 	food.Get("/", controllers.GetFoods)
 	food.Get("/:id", controllers.GetFoodById)
 	food.Post("/", controllers.AddFood)
-	food.Patch("/", controllers.UpdateFood)
+	food.Patch("/:id", controllers.UpdateFood)
 }

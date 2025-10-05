@@ -1,8 +1,17 @@
 package routers
 
+import (
+	"foodorder/controllers"
 
-import "github.com/gofiber/fiber/v3"
+	"github.com/gofiber/fiber/v3"
+)
 
 func UserRoutes(app *fiber.App) {
+	user := app.Group("/user")
 
+	user.Get("/:id", controllers.GetUserDataById)
+	user.Post("/register", controllers.Register)
+	user.Post("/login", controllers.Login)
+	user.Patch("/update", controllers.Update)
+	user.Delete("/deleteAccount", controllers.DeleteAccount)
 }
